@@ -29,7 +29,9 @@ class StrangeWorkflow {
   };
   
   public async function SendMessage(): Promise<string> {
-    const msg = await message();
+    const send = await message();
+    
+    const msg = send(this.message);
     
     return msg;
   };
